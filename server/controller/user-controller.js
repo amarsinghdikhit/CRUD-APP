@@ -52,6 +52,6 @@ export const deleteUser=async(request,response)=>{
        await User.deleteOne({_id:request.params.id}, deleteUser)
        response.status(201).json({message:'user deleted successfully'});
     }catch(error){
-        response.status(409).json({message:error.message});
+       //console.log("error");
     }
 }
